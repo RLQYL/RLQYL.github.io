@@ -17,10 +17,29 @@ body{
     margin: auto;
     animation: show_title 1s ease-in-out;
     padding-top: 0;
+    margin-bottom: 0px;
 }
 
 /* Animations */
+@keyframes show_title {
+    0% {
+      padding-top: 2%;
+      opacity: 0;
+    }
+  
+    100% {
+      padding-top: 4%;
+      opacity: 1;
+    }
+  }
+  
 @keyframes show_card {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes show_searchBar {
     0% { opacity: 0; }
     50% { opacity: 0; }
     100% { opacity: 1; }
