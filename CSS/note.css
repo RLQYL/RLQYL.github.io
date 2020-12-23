@@ -7,6 +7,7 @@ body{
 
 .title{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     font-size: 2rem;
     font-weight: bold;
@@ -19,7 +20,8 @@ body{
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: center;
+    align-items: center;
+    margin-bottom: 0;
 }
 
 .buttonLinks{
@@ -52,13 +54,17 @@ a:hover{
 }
 
 .NoteLinks{
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     list-style-type: none;
     margin-top: 20px;
     border-width: 2px solid black;
 }
 
 .NoteLinks a{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    line-height: 40px;
     color: black;
     text-decoration: none;
 }

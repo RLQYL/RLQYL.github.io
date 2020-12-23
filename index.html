@@ -5,46 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/card.css">
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
-	<link rel="stylesheet" type="text/css" href="CSS/searchBar.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="/searchBar.js"> </script>
+	<script src="./searchBar.js"> </script>
 	<title> Home Page </title>
 </head>
 
 <body>
-	<h1 class="title"> Welcome to my website </h1>
 
-	<div class="searchBar">
-		<input id="bar" type="text" placeholder="Search for a course", maxlength="6", pattern="^[a-zA-Z]{4}[0-9]{2}">
-	</div>
+	<div class="container">
 
-	<div class="cards">
+		<h1 class="home_title"> Welcome to my website </h1>
 
-		<div class="card">
-			<img class="card_title" src="Images/grid.png" alt="Paper" style="width:100%">
-			<a class="card_content" href="https://rlqyl.github.io/A-Level/A-Level.html"> A-Level Notes </a>
+		<div class="searchBar">
+			<h2> Search for a course:</h2>
+			<input id="bar" type="text" maxlength="6" pattern="^[a-zA-Z]{4}[0-9]{2}">
 		</div>
 
-		<div class="card">
-			<img class="card_title" src="Images/grid.png" alt="Paper" style="width:100%">
-			<a class="card_content" href="https://rlqyl.github.io/B-Level/B-Level.html"> B-Level Notes </a>
+		<div class="cards">
+			<a href="https://rlqyl.github.io/A-Level/A-Level.html"><button class="card"> A-Level Notes </button></a>
+			<a href="https://rlqyl.github.io/B-Level/B-Level.html"><button class="card"> B-Level Notes </button></a>
+			<a href="https://rlqyl.github.io/C-Level/C-Level.html"><button class="card"> C-Level Notes </button></a>
+			<a href="https://rlqyl.github.io/D-Level/D-Level.html"><button class="card"> D-Level Notes </button></a>
 		</div>
-
-		<div class="card">
-			<img class="card_title" src="Images/grid.png" alt="Paper" style="width:100%">
-			<a class="card_content" href="https://rlqyl.github.io/C-Level/C-Level.html"> C-Level Notes </a>
-		</div>
-
-		<div class="card">
-			<img class="card_title" src="Images/grid.png" alt="Paper" style="width:100%">
-			<a class="card_content" href="https://rlqyl.github.io/D-Level/D-Level.html"> D-Level Notes </a>
-		</div>
-
-		<div class="card">
-			<img class="card_title" src="Images/grid.png" alt="Paper" style="width:100%">
-			<a class="card_content" href="https://rlqyl.github.io/Mark-Calculator/markcalculator.html"> Mark Calculator </a>
-		</div>
-	</div>
+	</div>		
 
 </body>
 </html>     
