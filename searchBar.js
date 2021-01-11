@@ -1,8 +1,8 @@
 $(document).ready(function(){
     var input = document.getElementById("bar");
-    var a_level_classes = ["CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "PSYA01", "PSYA02"];
+    var a_level_classes = ["CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "MGTA02", "PSYA01", "PSYA02"];
     var b_level_classes = ["CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB42", "MATB44", "STAB52"];
-    var c_level_classes = ["CSC384", "CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44"];
+    var c_level_classes = ["CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44"];
     var d_level_classes = ["CSCD01"];
     
     
