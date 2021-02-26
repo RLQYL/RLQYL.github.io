@@ -2,7 +2,7 @@
 $(document).ready(function(){
     let input = document.getElementById("bar");
     let a_level_classes = ["CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "MGTA02", "PSYA01", "PSYA02"];
-    let b_level_classes = ["CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB42", "MATB44", "STAB52"];
+    let b_level_classes = ["CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB44", "STAB52"];
     let c_level_classes = ["CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44"];
     let d_level_classes = ["CSCD01"];
     
