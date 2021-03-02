@@ -42,6 +42,11 @@ body{
   outline: none;
 }
 
+#error{
+  color: red;
+  font-size: 150%;
+}
+
 /* Animations */
 @keyframes show_title {
     0% {
