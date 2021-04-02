@@ -3,7 +3,8 @@
 }
 
 body{
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-color: black;
+    color: white;
     border: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,12 +21,12 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #434343;
+    background: white;
     border-radius: 16px;
     box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
 }

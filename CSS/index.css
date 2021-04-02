@@ -9,7 +9,6 @@
 
 
 .home_title{
-  color: black;
   animation: show_title 1s ease-in-out;
   display: flex;
   flex-wrap: wrap;
@@ -41,6 +40,7 @@
   position: absolute;
   font-size: 2rem;
   right: 12%;
+  color: black;
 }
 
 #search_msg{
@@ -50,7 +50,6 @@
 }
 
 #bar{
-  border: 2px solid black;
   font-size: 1.5rem;
   width: 75%;
   height: 5%;
@@ -92,7 +91,6 @@
 @media only screen and (min-width: 540px) {
 
   .home_title{
-    color: black;
     animation: show_title 1s ease-in-out;
     display: flex;
     flex-wrap: wrap;
@@ -110,7 +108,6 @@
   }
   
   #bar{
-    border: 2px solid black;
     font-size: 2rem;
     width: 75%;
     height: 5%;
@@ -127,12 +124,13 @@
     position: absolute;
     font-size: 3rem;
     right: 12%;
+    color: black;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .home_title{
-    color: black;
+    color: white;
     animation: show_title 1s ease-in-out;
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +148,6 @@
   }
   
   #bar{
-    border: 2px solid black;
     font-size: 3rem;
     width: 75%;
     height: 5%;
@@ -167,12 +164,13 @@
     position: absolute;
     font-size: 3.5rem;
     right: 12%;
+    color: black;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .home_title{
-    color: black;
+    color: white;
     animation: show_title 1s ease-in-out;
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +188,6 @@
   }
   
   #bar{
-    border: 2px solid black;
     font-size: 3rem;
     width: 75%;
     height: 5%;
@@ -207,6 +204,7 @@
     position: absolute;
     font-size: 3.5rem;
     right: 12%;
+    color: black;
   }
 }
 
@@ -215,7 +213,7 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     .home_title{
-      color: black;
+      color: white;
       animation: show_title 1s ease-in-out;
       display: flex;
       flex-wrap: wrap;
@@ -233,7 +231,6 @@
     }
     
     #bar{
-      border: 2px solid black;
       font-size: 3rem;
       width: 75%;
       height: 5%;
@@ -244,6 +241,7 @@
       position: absolute;
       font-size: 3.5rem;
       right: 12%;
+      color: black;
     }
     
     #error{
