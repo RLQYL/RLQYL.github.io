@@ -11,7 +11,6 @@
     display: block;
     list-style-type: none;
     margin-top: 20px;
-    border-width: 2px solid black;
 }
 
 .NoteLinks li{
@@ -23,12 +22,12 @@
 .NoteLinks a{
     font-size: 1.75rem;
     font-weight: bold;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .NoteLinks a:hover{
-    color: red;
+    color: yellow;
     font-style: italic;
 }
 
