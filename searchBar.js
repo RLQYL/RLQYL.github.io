@@ -5,57 +5,49 @@
 
     $(document).ready(function(){
         let input = document.getElementById("bar");
-        let a_level_classes = ["CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "MGTA02", "PSYA01", "PSYA02"];
-        let b_level_classes = ["CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB44", "STAB52"];
-        let c_level_classes = ["CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44"];
-        let d_level_classes = ["CSCD01"];
-        let found_course = true;
         
         $(input).keyup(function(event) {
             if (event.keyCode === 13) {
-                
-                let class_name = input.value;
+                let class_name = input.value.toUpperCase();
 
-                if(class_name[3].toUpperCase() === "A" || class_name[3] === "1"){
-                    if(a_level_classes.includes(class_name.toUpperCase())){
-                        window.location.href = `https://rlqyl.github.io/A-Level/${class_name.toUpperCase()}/${class_name.toUpperCase()}.html`;
+                // Validates the input
+                if(validateInput(class_name)){
+                    // Checks if I have notes for that course.
+                    if(checkValidCourse(class_name)){
+                        // Goes to the notes page.
+                        let class_level = class_name[3];
+                        window.location.href = `https://rlqyl.github.io/${class_level}-Level/${class_name}/${class_name}.html`;
                     }
                     else{
-                        found_course = false;
+                        document.getElementById("error").innerHTML = "Course not found";
                     }
+                }else{
+                    document.getElementById("error").innerHTML = "Invalid input.";
                 }
-                else if(class_name[3].toUpperCase() === "B" || class_name[3] === "2"){
-                    if(b_level_classes.includes(class_name.toUpperCase())){
-                        window.location.href = `https://rlqyl.github.io/B-Level/${class_name.toUpperCase()}/${class_name.toUpperCase()}.html`;
-                    }
-                    else{
-                        found_course = false;
-                    }
-                }
-                else if(class_name[3].toUpperCase() === "C" || class_name[3] === "3"){
-                    if(c_level_classes.includes(class_name.toUpperCase())){
-                        window.location.href = `https://rlqyl.github.io/C-Level/${class_name.toUpperCase()}/${class_name.toUpperCase()}.html`;
-                    }
-                    else{
-                        found_course = false;
-                    }
-                }
-                else if(class_name[3].toUpperCase() === "D" || class_name[3] === "4"){
-                    if(d_level_classes.includes(class_name.toUpperCase())){
-                        window.location.href = `https://rlqyl.github.io/D-Level/${class_name.toUpperCase()}/${class_name.toUpperCase()}.html`;
-                    }
-                    else{
-                        found_course = false;
-                    }
-                }
-                else{
-                    found_course = false;
-                }
-            }
 
-            if (!found_course){
-                document.getElementById("error").innerHTML = "Course not found";
+                // Clears the search bar.
+                input.value="";
             }
         });
     });
+
+    function validateInput(course_code){
+        // Sanitizes the input
+        course_code = course_code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+        // Checks if the length of the input is 6 characters exactly and
+        // if it matches the utsc course code format.
+        return (course_code.length === 6 && course_code.match(/^[A-Z]{4}[0-9]{2}/) !== null);
+    }
+
+    function checkValidCourse(course_code){
+        // Checks if the course entered is one I have notes for.
+        let classes = [
+            "CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "MGTA02", "PSYA01", "PSYA02",
+            "CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB44", "STAB52",
+            "CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44",
+            "CSCD01"
+        ];
+        return (classes.includes(course_code));
+    }
 }());
