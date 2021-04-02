@@ -22,7 +22,7 @@
                         document.getElementById("error").innerHTML = "Course not found";
                     }
                 }else{
-                    document.getElementById("error").innerHTML = "Invalid input.";
+                    document.getElementById("error").innerHTML = "Invalid input";
                 }
 
                 // Clears the search bar.
