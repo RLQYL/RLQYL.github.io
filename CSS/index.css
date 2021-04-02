@@ -54,6 +54,7 @@
   width: 75%;
   height: 5%;
   outline: none;
+  box-shadow: 4px 8px grey;
 }
 
 #error{
