@@ -31,6 +31,18 @@
   align-items: center;
 }
 
+#inputBar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.material-icons{
+  position: absolute;
+  font-size: 2rem;
+  right: 12%;
+}
+
 #search_msg{
   font-size: 1rem;
   margin-bottom: 0;
@@ -110,6 +122,12 @@
     font-weight: bold;
     font-size: 2rem;
   }
+
+  .material-icons{
+    position: absolute;
+    font-size: 3rem;
+    right: 12%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -143,6 +161,12 @@
     color: red;
     font-weight: bold;
     font-size: 2rem;
+  }
+
+  .material-icons{
+    position: absolute;
+    font-size: 3.5rem;
+    right: 12%;
   }
 }
 
@@ -178,6 +202,12 @@
     font-weight: bold;
     font-size: 2rem;
   }
+
+  .material-icons{
+    position: absolute;
+    font-size: 3.5rem;
+    right: 12%;
+  }
 }
 
 @media screen 
@@ -208,6 +238,12 @@
       width: 75%;
       height: 5%;
       outline: none;
+    }
+
+    .material-icons{
+      position: absolute;
+      font-size: 3.5rem;
+      right: 12%;
     }
     
     #error{

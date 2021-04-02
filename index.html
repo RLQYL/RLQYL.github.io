@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="CSS/card.css">
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
 	<link rel="stylesheet" type="text/css" href="CSS/global.css">
@@ -21,7 +22,10 @@
 
 		<div class="searchBar">
 			<h2 id="search_msg"> Search for a course:</h2>
-			<input id="bar" type="text" maxlength="6" pattern="^[a-zA-Z]{4}[0-9]{2}">
+			<div id="inputBar">
+				<input id="bar" type="text" maxlength="6" pattern="^[a-zA-Z]{4}[0-9]{2}">
+				<span class="material-icons">search</span>
+			</div>
 		</div>
 
 		<p id="error"></p>
