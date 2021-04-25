@@ -15,6 +15,7 @@
 }
 
 .card{
+  box-sizing: border-box;
   animation: show_card 2s ease-out;
   margin-bottom: 1%;
   box-shadow: 4px 8px grey;
@@ -46,6 +47,7 @@
   }
   
   .card{
+    box-sizing: border-box;
     animation: show_card 2s ease-out;
     margin-bottom: 1%;
     box-shadow: 4px 8px grey;
@@ -76,12 +78,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 2px;
-    width: 93%;
-    margin-left: 7%;
-    margin-right: 0;
+    width: 100%;
   }
   
   .card{
+    box-sizing: border-box;
     animation: show_card 2s ease-out;
     box-shadow: 4px 8px grey;
     transition: 0.5s;
@@ -96,24 +97,12 @@
     outline: none;
     width: 40%;
     margin-bottom: 10px;
+    margin-left: 50px;
     overflow-wrap: break-word;
   }
 
   .last{
     margin-bottom: 30px;
-  }
-
-  .header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header-card{
-    font-size: 1.7rem;
-    width: 22%;
   }
 }
 
@@ -124,12 +113,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 2px;
-    width: 90%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: 100%;
   }
   
   .card{
+    box-sizing: border-box;
     animation: show_card 2s ease-out;
     box-shadow: 4px 8px grey;
     transition: 0.5s;
@@ -142,41 +130,32 @@
     padding: 20px 24px;
     position: relative;
     outline: none;
-    width: 30%;
+    width: 25%;
     margin-bottom: 10px;
-    margin-left: 35px;
+    margin-left: 150px;
     overflow-wrap: break-word;
-  }
-
-  .header-card{
-    font-size: 2rem;
-    width: 22%;
   }
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1200px) {
   .cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
     margin-top: 2px;
-    width: 90%;
-    margin-left: 10%;
+    width: 100%;
   }
   
   .card{
+    box-sizing: border-box;
     animation: show_card 2s ease-out;
-    box-shadow: 4px 8px rgba(0,0,0,0.5);
+    box-shadow: 4px 8px grey;
     transition: 0.5s;
     border-radius: 5px;
-    box-shadow: 4px 8px grey;
+    background-color: white;
     color: black;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     padding: 20px 24px;
@@ -184,20 +163,7 @@
     outline: none;
     width: 20%;
     margin-bottom: 10px;
-    
+    margin-left: 60px;
     overflow-wrap: break-word;
-  }
-
-  .header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header-card{
-    font-size: 2rem;
-    width: 20%;
   }
 }
