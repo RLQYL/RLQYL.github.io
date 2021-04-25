@@ -31,6 +31,8 @@
   width: 50%;
   margin-bottom: 20px;
   overflow-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (min-width: 540px) {
@@ -142,6 +144,7 @@
     outline: none;
     width: 30%;
     margin-bottom: 10px;
+    margin-left: 35px;
     overflow-wrap: break-word;
   }
 
@@ -181,6 +184,7 @@
     outline: none;
     width: 20%;
     margin-bottom: 10px;
+    
     overflow-wrap: break-word;
   }
 
