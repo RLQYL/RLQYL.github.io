@@ -45,7 +45,7 @@
         let classes = [
             "CSCA67", "LINA01", "MATA31", "MATA37", "MGTA01", "MGTA02", "PSYA01", "PSYA02",
             "CSCB09", "CSCB20", "CSCB63", "LINB18", "MATB24", "MATB41", "MATB44", "STAB52",
-            "CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "MATC44",
+            "CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "CSCC69", "MATC44",
             "CSCD01"
         ];
         return (classes.includes(course_code));
