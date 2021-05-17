@@ -203,24 +203,21 @@
   }
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1200px) {
     .home_title{
       color: white;
       animation: show_title 1s ease-in-out;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      font-size: 3rem;
+      font-size: 5rem;
       font-weight: bold;
       margin-bottom: 0;
       padding-bottom: 0;
     }
 
     #search_msg{
-      font-size: 2rem;
+      font-size: 3.5rem;
       margin-bottom: 0;
       padding-bottom: 0;
     }
