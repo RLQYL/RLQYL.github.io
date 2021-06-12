@@ -1,42 +1,52 @@
 <!-- INDEX -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="CSS/card.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/global.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./searchBar.js"></script>
+    <title>Home Page</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="CSS/card.css">
-	<link rel="stylesheet" type="text/css" href="CSS/index.css">
-	<link rel="stylesheet" type="text/css" href="CSS/global.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="./searchBar.js"> </script>
-	<title> Home Page </title>
-</head>
+  <body>
+    <div class="container">
+      <h1 class="home_title">Welcome to my website</h1>
 
-<body>
+      <div class="searchBar">
+        <h2 id="search_msg">Search for a course:</h2>
+        <div id="inputBar">
+          <input id="bar" type="text" maxlength="6" />
+          <span class="material-icons">search</span>
+        </div>
+      </div>
 
-	<div class="container">
+      <p id="error"></p>
 
-		<h1 class="home_title"> Welcome to my website </h1>
-
-		<div class="searchBar">
-			<h2 id="search_msg"> Search for a course:</h2>
-			<div id="inputBar">
-				<input id="bar" type="text" maxlength=6>
-				<span class="material-icons">search</span>
-			</div>
-		</div>
-
-		<p id="error"></p>
-
-		<div class="cards header">
-			<a href="https://rlqyl.github.io/A-Level/A-Level.html" class="card"> A-Level Notes </a>
-			<a href="https://rlqyl.github.io/B-Level/B-Level.html" class="card"> B-Level Notes </a>
-			<a href="https://rlqyl.github.io/C-Level/C-Level.html" class="card"> C-Level Notes </a>
-			<a href="https://rlqyl.github.io/D-Level/D-Level.html" class="card"> D-Level Notes </a>
-		</div>
-	</div>		
-
-</body>
-</html>     
+      <div class="cards header">
+        <a href="https://rlqyl.github.io/A-Level/A-Level.html" class="card">
+          A-Level Notes
+        </a>
+        <a href="https://rlqyl.github.io/B-Level/B-Level.html" class="card">
+          B-Level Notes
+        </a>
+        <a href="https://rlqyl.github.io/C-Level/C-Level.html" class="card">
+          C-Level Notes
+        </a>
+        <a
+          href="https://rlqyl.github.io/D-Level/D-Level.html"
+          class="card last"
+        >
+          D-Level Notes
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
