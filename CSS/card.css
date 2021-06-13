@@ -1,10 +1,10 @@
 .card:hover {
-  box-shadow: 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 8px 16px rgba(0, 0, 0, 0.2);
   color: red;
   font-style: italic;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-.card{
+.card {
   box-sizing: border-box;
   animation: show_card 2s ease-out;
   margin-bottom: 1%;
@@ -36,8 +36,12 @@
   margin-right: auto;
 }
 
+.last {
+  margin-bottom: 10%;
+}
+
 @media only screen and (min-width: 540px) {
-  .cards{
+  .cards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -45,8 +49,8 @@
     margin-top: 2px;
     width: 100%;
   }
-  
-  .card{
+
+  .card {
     box-sizing: border-box;
     animation: show_card 2s ease-out;
     margin-bottom: 1%;
@@ -66,13 +70,13 @@
     overflow-wrap: break-word;
   }
 
-  .last{
-    margin-bottom: 30px;
+  .last {
+    margin-bottom: 10%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .cards{
+  .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -80,8 +84,8 @@
     margin-top: 2px;
     width: 100%;
   }
-  
-  .card{
+
+  .card {
     box-sizing: border-box;
     animation: show_card 2s ease-out;
     box-shadow: 4px 8px grey;
@@ -101,13 +105,13 @@
     overflow-wrap: break-word;
   }
 
-  .last{
-    margin-bottom: 30px;
+  .last {
+    margin-bottom: 5%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .cards{
+  .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -115,8 +119,8 @@
     margin-top: 2px;
     width: 100%;
   }
-  
-  .card{
+
+  .card {
     box-sizing: border-box;
     animation: show_card 2s ease-out;
     box-shadow: 4px 8px grey;
@@ -127,7 +131,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    padding: 20px 24px;
+    padding: 10px 12px;
     position: relative;
     outline: none;
     width: 25%;
@@ -138,7 +142,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .cards{
+  .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -146,8 +150,8 @@
     margin-top: 2px;
     width: 100%;
   }
-  
-  .card{
+
+  .card {
     box-sizing: border-box;
     animation: show_card 2s ease-out;
     box-shadow: 4px 8px grey;
@@ -161,9 +165,40 @@
     padding: 20px 24px;
     position: relative;
     outline: none;
-    width: 20%;
-    margin-bottom: 10px;
+    width: 17.5%;
+    margin-bottom: 3%;
     margin-left: 60px;
     overflow-wrap: break-word;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 2px;
+      width: 100%;
+    }
+
+    .card {
+      box-sizing: border-box;
+      animation: show_card 2s ease-out;
+      box-shadow: 4px 8px grey;
+      transition: 0.5s;
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px 24px;
+      position: relative;
+      outline: none;
+      width: 20%;
+      margin-bottom: 3%;
+      margin-left: 60px;
+      overflow-wrap: break-word;
+    }
   }
 }
