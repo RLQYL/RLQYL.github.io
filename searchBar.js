@@ -5,6 +5,7 @@
 
     $(document).ready(function(){
         let input = document.getElementById("bar");
+        let courseCodes = {'1': 'A', 'B': 2, '3':'C', '4': 'D'};
         
         $(input).keyup(function(event) {
             if (event.keyCode === 13) {
@@ -16,6 +17,11 @@
                     if(checkValidCourse(class_name)){
                         // Goes to the notes page.
                         let class_level = class_name[3];
+                        if(! isNaN(class_level))
+                        {
+                            class_level = courseCodes[class_level];
+                        }
+
                         window.location.href = `https://rlqyl.github.io/${class_level}-Level/${class_name}/${class_name}.html`;
                     }
                     else{
@@ -37,7 +43,7 @@
 
         // Checks if the length of the input is 6 characters exactly and
         // if it matches the utsc course code format.
-        return (course_code.length === 6 && course_code.match(/^[A-Z]{4}[0-9]{2}/) !== null);
+        return (course_code.length === 6 && (course_code.match(/^[A-Z]{4}[0-9]{2}/) !== null || course_code.match(/^[A-Z]{3}[0-9]{3}/) !== null));
     }
 
     function checkValidCourse(course_code){
@@ -48,6 +54,7 @@
             "CSCC01", "CSCC09", "CSCC24", "CSCC37", "CSCC43", "CSCC63", "CSCC69", "MATC44",
             "CSC373", "CSCC11", "CSCD01"
         ];
+
         return (classes.includes(course_code));
     }
 }());
