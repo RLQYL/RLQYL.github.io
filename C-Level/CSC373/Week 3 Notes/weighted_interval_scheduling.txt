@@ -1,0 +1,28 @@
+class Jobs:
+    def __init__(self, jobs):
+        self.jobs = jobs
+
+    def findMaxWeight(self):
+        ordering = [-1] * len(self.jobs)
+        for i in range(len(self.jobs)):
+            start = self.jobs[i][0]
+            for j in range(len(self.jobs)):
+                finish = self.jobs[j][1]
+                if i != j and finish <= start and j > ordering[i]:
+                    ordering[i] = j
+
+        weights = [0] * len(self.jobs)
+        for i in range(len(self.jobs)):
+            if ordering[i] == -1:
+                weights[i] = self.jobs[i][2]
+            else:
+                index = ordering[i]
+                weights[i] = max(self.jobs[i][2], self.jobs[i][2] + weights[index])
+
+        return max(weights)
+
+
+values = [(3, 10, 20), (1, 2, 50), (6, 19, 100), (2, 100, 200)]
+values.sort(key=lambda x: x[1])
+jobs = Jobs(values)
+print(jobs.findMaxWeight())
