@@ -1,0 +1,32 @@
+class Graph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = []
+
+        # function to add an edge to graph
+
+    def addEdge(self, u, v, w):
+        self.graph.append([u, v, w])
+
+    def shortestPath(self, start, end):
+        dist = [float("inf")] * self.V
+        dist[start] = 0
+        for i in range(self.V):
+            for s, e, w in self.graph:
+                if dist[s] != float("inf") and dist[s] + w < dist[e]:
+                    dist[e] = dist[s] + w
+
+        return dist[end]
+
+
+g = Graph(5)
+g.addEdge(0, 1, 5)
+g.addEdge(0, 2, 4)
+g.addEdge(1, 2, 3)
+g.addEdge(1, 3, 2)
+g.addEdge(1, 4, 2)
+g.addEdge(3, 2, 5)
+g.addEdge(4, 3, 2)
+
+# Print the solution
+print(g.shortestPath(0, 4))
