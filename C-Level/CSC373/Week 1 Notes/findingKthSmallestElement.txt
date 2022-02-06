@@ -1,0 +1,90 @@
+def kthSmallestNumber(array, k):
+    """
+    This method uses divide and conquer (quick sort) to return the kth smallest number
+    """
+
+    def quicksort(array):
+        if len(array) <= 1:
+            return array
+
+        l = 0
+        pivot = array[-1]
+        r = len(array) - 2
+
+        while l < r:
+            if array[l] > pivot > array[r]:
+                array[l], array[r] = array[r], array[l]
+                l += 1
+                r -= 1
+
+            if array[l] < pivot:
+                l += 1
+
+            if array[r] > pivot:
+                r -= 1
+
+        if array[l] < pivot:
+            l += 1
+
+        return quicksort(array[:l]) + [pivot] + quicksort(array[l:-1])
+
+    return quicksort(array)[k - 1]
+
+
+arr = [0, 1, -4, 9, 2, 5]
+k = 2
+print(kthSmallestNumber(arr, k))
+
+arr = [0, -1, -3, 9, 2, 5, 10]
+k = 6
+print(kthSmallestNumber(arr, k))
+
+
+def kthSmallestNumber2(array, k):
+    """
+    This method uses divide and conquer (median of medians) to return the kth smallest number
+    """
+
+    def medianOfMedians(array):
+
+        if len(array) <= 1:
+            return array
+
+        buckets = []
+        medians = []
+
+        for i in range(0, len(array), 5):
+            new_arr = array[i : i + 5]
+            buckets.append(new_arr)
+
+        for bucket in buckets:
+            bucket.sort()
+            medians.append(bucket[len(bucket) // 2])
+
+        medians.sort()
+        pivot = medians[len(medians) // 2]
+
+        left = []
+        right = []
+        pivots = []
+
+        for item in array:
+            if item < pivot:
+                left.append(item)
+            elif item == pivot:
+                pivots.append(item)
+            else:
+                right.append(item)
+
+        return medianOfMedians(left) + pivots + medianOfMedians(right)
+
+    return medianOfMedians(array)[k - 1]
+
+
+arr = [0, 1, -4, 9, 2, 5]
+k = 2
+print(kthSmallestNumber2(arr, k))
+
+arr = [0, -1, -3, 9, 2, 5, 10]
+k = 6
+print(kthSmallestNumber2(arr, k))
