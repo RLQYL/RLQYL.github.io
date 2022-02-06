@@ -1,0 +1,48 @@
+def closest_pair(coordinates):
+    if len(coordinates) <= 2:
+        return coordinates
+
+    coordinates.sort(key=lambda x: x[1])
+    mid = len(coordinates) // 2
+    left = closest_pair(coordinates[:mid])
+    right = closest_pair(coordinates[mid:])
+    return merge(left, right)
+
+
+def merge(a1, a2):
+    min_dist = float("inf")
+    min_dist_points = []
+
+    for i in range(len(a1) - 1):
+        x1, y1 = a1[i]
+        x2, y2 = a1[i + 1]
+        dist = calc_dist(x1, y1, x2, y2)
+        if dist < min_dist:
+            min_dist = dist
+            min_dist_points = [(x1, y1), (x2, y2)]
+
+    for i in range(len(a2) - 1):
+        x1, y1 = a2[i]
+        x2, y2 = a2[i + 1]
+        dist = calc_dist(x1, y1, x2, y2)
+        if dist < min_dist:
+            min_dist = dist
+            min_dist_points = [(x1, y1), (x2, y2)]
+
+    x1, y1 = a1[-1]
+    x2, y2 = a2[0]
+    dist = calc_dist(x1, y1, x2, y2)
+    if dist < min_dist:
+        min_dist = dist
+        min_dist_points = [(x1, y1), (x2, y2)]
+
+    return min_dist_points
+
+
+def calc_dist(x1, y1, x2, y2):
+    return ((y2 - y1) ** 2 + (x2 - x1) ** 2) ** (1 / 2)
+
+
+points = [(1, 1), (-1, 5), (2, 5), (6, 3), (-10, 5)]
+print(closest_pair(points))
+
