@@ -1,0 +1,25 @@
+def interval_scheduling(jobs):
+    """
+    Jobs is an array of start and end times.
+    E.g. jobs = [(s1, f1), ..., (sn, fn)]
+    """
+
+    jobs.sort(key=lambda x: x[1])
+
+    possible_jobs = set()
+    prev_finish_time = 0
+    for i in range(len(jobs)):
+        print(possible_jobs)
+        s = jobs[i][0]
+        e = jobs[i][1]
+
+        if s >= prev_finish_time:
+            possible_jobs.add(jobs[i])
+            prev_finish_time = e
+
+    return len(possible_jobs)
+
+
+jobs = [(2, 5), (1, 3), (4, 8), (1, 6), (5, 8)]
+print(interval_scheduling(jobs))
+

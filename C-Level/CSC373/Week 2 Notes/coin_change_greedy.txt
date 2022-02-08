@@ -1,0 +1,24 @@
+def coin_change(coins, total):
+    fewest_coins = 0
+    cur_coin_index = 0
+    cur_coin_value = coins[cur_coin_index]
+
+    while total > 0:
+        while total < cur_coin_value:
+            cur_coin_index += 1
+            cur_coin_value = coins[cur_coin_index]
+
+        fewest_coins += total // cur_coin_value
+        total %= cur_coin_value
+
+    return fewest_coins
+
+
+coins_1 = [10, 7, 1]
+total_1 = 15
+print(coin_change(coins_1, total_1))
+
+coins_2 = [10, 7, 1]
+total_2 = 18
+print(coin_change(coins_2, total_2))
+
